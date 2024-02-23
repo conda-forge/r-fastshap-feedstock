@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fastshap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fastshap/fastshap_{{ version }}.tar.gz
-  sha256: 861d38f1f7ccdaa1604f98ca24b580a2d3ac8e5278e4fd6e61df675550615084
+  sha256: 62e10fcd192cbde262db6b6a6395b98da3e7c935b7d4bf692fc8224cf6b4cbc8
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -54,10 +54,7 @@ about:
   home: https://bgreenwell.github.io/fastshap/
   dev_url: https://github.com/bgreenwell/fastshap
   license: GPL-2.0-or-later
-  summary: Computes fast (relative to other implementations) approximate Shapley values for any
-    supervised learning model. Shapley values help to explain the predictions from any
-    black box model using ideas from game theory; see Strumbel and Kononenko (2014)
-    <doi:10.1007/s10115-013-0679-x> for details.
+  summary: Computes fast (relative to other implementations) approximate Shapley values for any supervised learning model. Shapley values help to explain the predictions from any black box model using ideas from game theory; see Strumbel and Kononenko (2014) <doi:10.1007/s10115-013-0679-x> for details.
   license_family: GPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
